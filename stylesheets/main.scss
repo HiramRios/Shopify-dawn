@@ -1,0 +1,24 @@
+/* mixins */
+@use 'sass:math';
+
+
+/* variables */
+
+/* media queries and imports */
+
+/* mobile */
+@import 'sections/image-banner/mobile.scss';
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1112px) {
+  /* tablet */
+	@import 'sections/image-banner/tablet.scss';
+	
+
+}
+
+@media screen and (min-width: 1113px) {
+	@import 'sections/image-banner/desktop.scss';
+  
+}

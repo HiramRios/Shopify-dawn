@@ -1,0 +1,29 @@
+{
+  "name": "shopify-gulp",
+  "version": "1.0.0",
+  "description": "If you’re using OSX or Linux, run this command in Terminal: ``` $ curl https://raw.githubusercontent.com/Shopify/themekit/master/scripts/install | python ``` After running that command, follow the instructions in your Terminal to change your bash profile. This will give you access to the theme commands. If you’re using Windows, head over to Theme Kit’s website to download the .zip files. Once downloaded, unzip and install Theme Kit manually. # Step 2: Set up API Access To authorize Theme Kit with your Shopify store, you’ll need to use a Private App. Head over to: https://starfaceworld.myshopify.com/admin/apps/private and select \"Theme\". Copy your API Password, you’ll need it in the next step.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiramRios/Shopify-dawn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HiramRios/Shopify-dawn/issues"
+  },
+  "homepage": "https://github.com/HiramRios/Shopify-dawn#readme",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.41.1"
+  },
+  "dependencies": {
+    "gulp-rename": "^2.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+.show-mobile-only {
+    display: none;
+}
+.default-heading {
+    font-size: 54px;
+    line-height: 46px;
+}
+.homepage {
+    &.btn {
+        font-size: 18px;
+        line-height: 18px;
+        height:50px;
+        width:200px;
+    }
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+.below-header {
+    padding-top: 107px;
+}
