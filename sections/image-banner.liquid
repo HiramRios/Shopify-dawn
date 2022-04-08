@@ -133,12 +133,12 @@
         {% if section.settings.image_2 != blank %}class="banner__media-image-half"{% endif %}
       >
     </div>
-  <!-- {%- elsif section.settings.image_2 == blank -%}
+  {%- elsif section.settings.image_2 == blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
       {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
-  {%- endif -%} -->
-  <!-- {%- if section.settings.image_2 != blank -%}
+  {%- endif -%}
+  {%- if section.settings.image_2 != blank -%}
     <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}">
       <img
         srcset="{%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | image_url: width: 375 }} 375w,{%- endif -%}
@@ -158,7 +158,7 @@
         height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio }}"
         {% if section.settings.image != blank %}class="banner__media-image-half"{% endif %}
       >
-    </div> -->
+    </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
