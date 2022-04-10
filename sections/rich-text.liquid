@@ -4,9 +4,13 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
 
+
+
+
+
 <ul  class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
 {%- for block in section.blocks -%}
-<div>test</div>
+<div class = "feature-prod">test</div>
 
 {%- endfor -%}
 </ul>
@@ -47,7 +51,13 @@
 
 
 
-
+<style>
+  .feature-prod{
+    width: 340px;
+    height: 340px;
+    background-color: aqua;
+  }
+</style>
 
 
 
