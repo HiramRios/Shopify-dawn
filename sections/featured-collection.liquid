@@ -27,19 +27,7 @@
     </div>
 
 
-    <slider-component class="page-width page-width-desktop ">
-      <ul  class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
-        {%- for product in block.settings.collection.products limit: block.settings.products_to_show -%}
-          <li id="" class="grid__item">
-            {% render 'card-product',
-              card_product: product,
-              section_id: section.id
-            %}
-          </li>
-        {%- endfor -%}
-      </ul>
-     
-    </slider-component>
+   
 </div>
 
 {%- endfor -%}
