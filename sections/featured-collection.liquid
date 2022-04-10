@@ -11,8 +11,8 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- style -%}
-  <!-- .section-{{ section.id }}-padding {
+<!-- {%- style -%}
+  .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
@@ -22,10 +22,10 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-  } -->
-{%- endstyle -%}
+  }
+{%- endstyle -%} -->
 
-{%- liquid
+<!-- {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
   if section.settings.collection.all_products_count > section.settings.products_to_show
@@ -43,7 +43,7 @@
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
--%}
+-%} -->
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   test
@@ -66,7 +66,7 @@
 
 
 
-
+<!-- 
 
 
 
@@ -309,7 +309,7 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} -->
 
 
 
