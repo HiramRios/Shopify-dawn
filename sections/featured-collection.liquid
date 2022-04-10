@@ -77,7 +77,7 @@
         {%- endfor -%}
       </ul>
 
-      <!-- {%- if show_mobile_slider or show_desktop_slider -%}
+      {%- if show_mobile_slider or show_desktop_slider -%}
         <div class="slider-buttons no-js-hidden">
           <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
           <div class="slider-counter caption">
@@ -89,9 +89,9 @@
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
         </div>
       {%- endif -%}
-    </slider-component> -->
+    </slider-component>
 
-    <!-- {%- if section.settings.show_view_all and more_in_collection -%}
+    {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all">
         <a href="{{ section.settings.collection.url }}"
           class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
@@ -100,7 +100,7 @@
           {{ 'sections.featured_collection.view_all' | t }}
         </a>
       </div>
-    {%- endif -%} -->
+    {%- endif -%}
   </div>
 </div>
 
