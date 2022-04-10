@@ -67,6 +67,8 @@
     margin-left: 19px;
     margin-right: 19px;
     z-index: -5;
+    display: flex;
+    justify-content: center;
   }
 
 .img-style{
