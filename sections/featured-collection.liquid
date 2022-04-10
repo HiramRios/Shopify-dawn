@@ -19,7 +19,7 @@
 
 
 <div>
-  <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+  <div class="collection padding-collection {% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
       {%- if section.settings.title != blank -%}
         <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
@@ -258,3 +258,11 @@
   ]
 }
 {% endschema %}
+
+
+
+<style>
+.padding-collection{
+  padding-top: 50px;
+}
+</style>
