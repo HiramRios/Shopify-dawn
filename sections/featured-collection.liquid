@@ -33,7 +33,7 @@
     </div>
 
 
-    <slider-component class="page-width page-width-desktop ">
+    <div class="page-width page-width-desktop ">
       <ul id="Slider-{{ section.id }}" class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li id="" class="grid__item">
@@ -45,7 +45,7 @@
         {%- endfor -%}
       </ul>
      
-    </slider-component>
+    </div>
 
 
 
