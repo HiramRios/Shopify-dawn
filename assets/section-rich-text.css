@@ -66,5 +66,10 @@
     background: #F3F3F3; 
     margin-left: 19px;
     margin-right: 19px;
+    z-index: -5;
   }
 
+.img-style{
+  position: absolute;
+  z-index: -2;
+}

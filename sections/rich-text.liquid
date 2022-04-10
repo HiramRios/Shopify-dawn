@@ -11,7 +11,7 @@
 <div  class="grid product-grid grid--3-col-desktop">
 {%- for block in section.blocks -%}
 <div class = "feature-prod grid__item" >
-  <img  src= "{{ block.settings.imageOne | image_url: width: 183 }}">
+  <img class= "img-style" src= "{{ block.settings.imageOne | image_url: width: 183 }}">
 <span>{{ block.settings.description-text }}</span>
 </div>
 
