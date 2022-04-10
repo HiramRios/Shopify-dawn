@@ -13,30 +13,55 @@
 
 {% schema %}
 {
-  "name": "t:sections.rich-text.name",
-  "tag": "section",
-  "class": "section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "feature product"
-    }
-  ],
   "blocks": [
     {
-      "name": "feature products",
+      "type": "first-section",
+      "name": "First Section",
       "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "product label"
+          {
+          "id": "imageOne",
+          "type": "image_picker",
+          "label": "Image"
         }
       ]
-    }
+    },
+    {
+      "type": "second-section",
+      "name": "Second Section",
+      "settings": [
+          {
+          "id": "imageOne",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "third-section",
+      "name": "Third Section",
+      "settings": [
+          {
+          "id": "imageOne",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    },
+      { 
+        "type": "fourth-section",
+        "name": "Fourth Section", 
+        "settings": [ 
+            {
+          "id": "imageOne",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    } 
   ]
 }
 {% endschema %}
+
 
 
 
