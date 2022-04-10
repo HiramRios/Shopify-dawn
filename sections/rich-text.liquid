@@ -10,7 +10,7 @@
 <div class = "container">
 <div  class="grid product-grid grid--3-col-desktop">
 {%- for block in section.blocks -%}
-<div class = "feature-prod grid__item">
+<div class = "feature-prod grid__item" data-bgset = "{{ block.settings.imageOne| image_url: width: 384 }"  >
 <span>{{ block.settings.description-text }}</span>
 </div>
 
