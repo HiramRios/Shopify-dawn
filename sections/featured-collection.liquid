@@ -34,7 +34,7 @@
 
 
     <slider-component class="page-width page-width-desktop ">
-      <ul id="Slider-{{ section.id }}" class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
+      <ul  class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li id="" class="grid__item">
             {% render 'card-product',
@@ -73,7 +73,7 @@
     {
       "type": "richtext",
       "id": "description",
-      "label": "Sub Ttiles"
+      "label": "Sub Ttiles1"
     },
     {
       "type": "collection",
