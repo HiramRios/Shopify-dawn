@@ -11,15 +11,38 @@
 
 
 
-
+{%- for block in section.blocks -%}
 <div>
-test
+  <div class="collection padding-collection ">
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
+
+      {%- if block.settings.title != blank -%}
+        <h2 class="title ">{{ block.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if block.settings.description != blank -%}
+        <div class="collection__description ">{{ block.settings.description }}</div>
+      {%- endif -%}
+
+    </div>
 
 
-   
+    <slider-component class="page-width page-width-desktop ">
+      <ul  class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
+        {%- for product in block.settings.collection.products limit: block.settings.products_to_show -%}
+          <li id="" class="grid__item">
+            {% render 'card-product',
+              card_product: product,
+              section_id: section.id
+            %}
+          </li>
+        {%- endfor -%}
+      </ul>
+     
+    </slider-component>
 </div>
 
-
+{%- endfor -%}
 
 
 
@@ -29,37 +52,33 @@ test
 
 {% schema %}
 {
-  "blocks": [
+  "name": "Featured-collection",
+  "tag": "section",
+  "settings": [
     {
-      "name": "Featured-collection",
-      "tag": "section",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "default": "Featured collection",
-          "label": "Main Titles"
-        },
-        {
-          "type": "richtext",
-          "id": "description",
-          "label": "Sub Ttiles"
-        },
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "collection"
-        },
-        {
-          "type": "range",
-          "id": "products_to_show",
-          "min": 2,
-          "max": 6,
-          "step": 1,
-          "default": 4,
-          "label": "Products"
-        }
-      ]
+      "type": "text",
+      "id": "title",
+      "default": "Featured collection",
+      "label": "Main Titles"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Sub Ttiles"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "Products"
     }
   ]
 }
