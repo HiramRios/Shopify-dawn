@@ -7,21 +7,30 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
+{%- liquid
+  assign products_to_display = section.settings.collection.all_products_count
+
+  if section.settings.collection.all_products_count > section.settings.products_to_show
+    assign products_to_display = section.settings.products_to_show
+    assign more_in_collection = true
+  endif
+
+-%}
 
 
 
 
-{%- for block in section.blocks -%}
+
 <div>
   <div class="collection padding-collection ">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
 
-      {%- if block.settings.title != blank -%}
-        <h2 class="title ">{{ block.settings.title }}</h2>
+      {%- if section.settings.title != blank -%}
+        <h2 class="title ">{{ section.settings.title }}</h2>
       {%- endif -%}
 
-      {%- if block.settings.description != blank -%}
-        <div class="collection__description ">{{ block.settings.description }}</div>
+      {%- if section.settings.description != blank -%}
+        <div class="collection__description ">{{ section.settings.description }}</div>
       {%- endif -%}
 
     </div>
@@ -29,7 +38,7 @@
 
     <slider-component class="page-width page-width-desktop ">
       <ul  class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
-        {%- for product in block.settings.collection.products limit: block.settings.products_to_show -%}
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li id="" class="grid__item">
             {% render 'card-product',
               card_product: product,
@@ -42,7 +51,7 @@
     </slider-component>
 </div>
 
-{%- endfor -%}
+
 
 
 
@@ -52,8 +61,9 @@
 
 {% schema %}
 {
-  "name": "Featured-collection",
+  "name": "t:sections.featured-collection.name",
   "tag": "section",
+  "class": "section",
   "settings": [
     {
       "type": "text",
@@ -69,7 +79,7 @@
     {
       "type": "collection",
       "id": "collection",
-      "label": "collection"
+      "label": "t:sections.featured-collection.settings.collection.label"
     },
     {
       "type": "range",
@@ -78,7 +88,7 @@
       "max": 6,
       "step": 1,
       "default": 4,
-      "label": "Products"
+      "label": "t:sections.featured-collection.settings.products_to_show.label"
     }
   ]
 }
