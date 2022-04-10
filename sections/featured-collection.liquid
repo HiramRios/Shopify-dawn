@@ -21,16 +21,17 @@
 
 
 
+{%- for block in section.blocks -%}
 <div>
   <div class="collection padding-collection ">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
 
-      {%- if section.settings.title != blank -%}
-        <h2 class="title ">{{ section.settings.title }}</h2>
+      {%- if block.settings.title != blank -%}
+        <h2 class="title ">{{ block.settings.title }}</h2>
       {%- endif -%}
 
-      {%- if section.settings.description != blank -%}
-        <div class="collection__description ">{{ section.settings.description }}</div>
+      {%- if block.settings.description != blank -%}
+        <div class="collection__description ">{{ block.settings.description }}</div>
       {%- endif -%}
 
     </div>
@@ -38,7 +39,7 @@
 
     <slider-component class="page-width page-width-desktop ">
       <ul  class="grid product-grid contains-card contains-card--standard grid--3-col-desktop">
-        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+        {%- for product in block.settings.collection.products limit: block.settings.products_to_show -%}
           <li id="" class="grid__item">
             {% render 'card-product',
               card_product: product,
@@ -51,6 +52,7 @@
     </slider-component>
 </div>
 
+{%- endfor -%}
 
 
 
@@ -61,34 +63,38 @@
 
 {% schema %}
 {
-  "name": "t:sections.featured-collection.name",
-  "tag": "section",
-  "class": "section",
-  "settings": [
+  "blocks": [
     {
-      "type": "text",
-      "id": "title",
-      "default": "Featured collection",
-      "label": "Main Titles"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Sub Ttiles"
-    },
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "t:sections.featured-collection.settings.collection.label"
-    },
-    {
-      "type": "range",
-      "id": "products_to_show",
-      "min": 2,
-      "max": 6,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.featured-collection.settings.products_to_show.label"
+      "name": "t:sections.featured-collection.name",
+      "tag": "section",
+      "class": "section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Featured collection",
+          "label": "Main Titles"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Sub Ttiles"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.featured-collection.settings.collection.label"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 6,
+          "step": 1,
+          "default": 4,
+          "label": "t:sections.featured-collection.settings.products_to_show.label"
+        }
+      ]
     }
   ]
 }
