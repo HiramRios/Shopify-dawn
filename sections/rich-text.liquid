@@ -10,7 +10,7 @@
 <div class = "container">
 <div  class="grid product-grid grid--3-col-desktop">
 {%- for block in section.blocks -%}
-<div class = "feature-prod grid__item">test</div>
+<div data-bgset="{{ blocks.settings.imageOne  | img_url: '600x' }}" class = "feature-prod grid__item">test</div>
 
 {%- endfor -%}
 </div>
@@ -59,7 +59,6 @@
     /* background-color: aqua; */
     margin-left: 19px;
     margin-right: 19px;
-    background-image: {{ blocks.settings.imageOne }};
   }
 </style>
 
