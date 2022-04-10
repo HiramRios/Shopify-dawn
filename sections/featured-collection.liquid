@@ -44,12 +44,11 @@
               card_product: product,
               section_id: section.id
             %}
-          </li>
-         
             {% for tag in product.tags %}
             <li>{{ tag }}</li>
             {% endfor %}
        
+          </li>
           
         {%- endfor -%}
       </ul>
