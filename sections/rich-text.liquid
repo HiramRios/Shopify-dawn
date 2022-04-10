@@ -5,10 +5,10 @@
 <noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
 
 
-
+{%- for block in section.blocks -%}
 <div>test</div>
 
-
+{%- endfor -%}
 
 
 {% schema %}
