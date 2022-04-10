@@ -10,7 +10,7 @@
 <div class = "container">
 <div  class="grid product-grid grid--3-col-desktop">
 {%- for block in section.blocks -%}
-<div class = "feature-prod grid__item" data-bgset = "{{ block.settings.imageOne| image_url: width: 384 }"  >
+<div class = "feature-prod grid__item" style = "background-image: {{ block.settings.imageOne | image_url: width: 384 }};">
 <span>{{ block.settings.description-text }}</span>
 </div>
 
@@ -26,7 +26,7 @@
   "blocks": [
     {
       "type": "first-section",
-      "name": "First Sections",
+      "name": "First Sectionss",
       "limit": 3,
       "settings": [
         {
