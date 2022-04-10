@@ -40,12 +40,6 @@
               section_id: section.id
             %}
           </li>
-        {%- else -%}
-          {%- for i in (1..4) -%}
-            <li class="grid__item">
-              {% render 'card-product', show_vendor: section.settings.show_vendor %}
-            </li>
-          {%- endfor -%}
         {%- endfor -%}
       </ul>
      
@@ -70,7 +64,7 @@
   "settings": [
     {
       "type": "text",
-      "id": "title",
+      "id": "Main Title",
       "default": "Featured collection",
       "label": "Title"
     },
